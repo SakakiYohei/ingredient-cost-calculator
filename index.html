@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta charset="UTF-8">
+        <title>材料費計算</title>
+    </head>
+    <body>
+        <div class="recipe-name container">
+            <input type="text" placeholder="レシピ名" class="recipe-name">
+        </div>
+        
+        <div id="ingredient-forms-container" class="ingredientforms container"></div>
+
+        <div class="add-ingredient-form container">
+            <button id="add-ingredient-form">材料フォームを追加</button>
+        </div>
+        
+        <div class="total-ingredient-cost-display container">
+            <p id="total-ingredient-cost-display">合計: 0円</p>
+        </div>
+
+        <template id="ingredient-form-template">
+            <div class="ingredient-form">
+                <input type="text" placeholder="材料名" class="ingredient-name">
+                <input type="number" placeholder="量" class="amount">
+                <select name="select-unit" class="select-unit">
+                    <option value="g">g</option>
+                    <option value="ml">ml</option>
+                    <option value="個">個</option>
+                </select>
+                <span>あたり</span>
+                <input type="number" placeholder="価格" class="price">
+                <span>円</span>
+                <span class="unit-price-display"></span>
+                <span>使用量</span>
+                <input type="number" placeholder="使用量" class="usage">
+                <span class="unit-display"></span>
+                <span class="ingredient-cost">材料費: 0円</span>
+            </div>
+        </template>
+
+        <script src="script.js"></script>  
+
+    </body>
+</html>
