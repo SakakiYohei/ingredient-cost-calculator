@@ -27,7 +27,7 @@ export function updateIngredientCost(formElement) {
 export function updateTotalIngredientCost(){
     const totalIngredientCostDisplay = document.getElementById('total-ingredient-cost-display');
     const totalCost = calculateTotalIngredientCost();
-    totalIngredientCostDisplay.textContent = `合計: ${totalCost}円`
+    totalIngredientCostDisplay.textContent = `合計: ${totalCost.toFixed(2)}円`
   }
 
   
